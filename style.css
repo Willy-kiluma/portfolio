@@ -1,0 +1,493 @@
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #1a0338d7;
+    color: white;
+    padding-top: 20px;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border: 1px solid yellow; /* Very thin yellow border */
+    /*padding: 20px*/;             /*Padding inside the div*/
+    margin: 15px;              /* Margin outside the div */
+    border-radius: 0.9em;
+}
+
+.content-section {
+    position: relative; /* Required for positioning the image inside */
+    font-size: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: white;
+}
+
+/* Styling for individual cards (projects) */
+.project-card {
+    background-color: #1c023fd7;
+    border: 1px solid #ddd;
+    border-radius: 0.9em;
+    /*width: 26cm;*/
+    padding: 20px;
+    margin-bottom: 20px;
+    /*border-radius: 8px;*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid blue; /* Blue border with 3px thickness */
+    margin: 20px;            /* Margin outside the div */
+    
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.project-card a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    /*text-align: center;*/
+    padding: 10px 0;
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
+    border: 1px solid yellow; /* Very thin yellow border */
+    /*padding: 20px;             /* Padding inside the div */
+    margin: 15px;              /* Margin outside the div */
+    border-radius: 0.9em;
+}
+
+/* Contact Section Styling */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgba(0, 0, 255, 1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+}
+
+
+/* Typing effect for the 'Software Engineer' text
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Keyframes for blink effect (cursor simulation) */
+/* @keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+} */
+
+
+/* Styling for the shouty, bold 'Software Engineer' text */
+.highlight-text {
+    color: rgb(241, 17, 103);
+    /* overflow: hidden;
+    font-weight: bold;
+    white-space: nowrap;
+    display: inline-block;
+    border-right: 0.15em solid orange;
+    animation: typing 5s steps(25), */
+}
+
+.language {
+    color: red;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+.hero {
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 255, 0.5);
+    width: 8cm; /* Set the width to 7 cm */
+    height: 6vh;
+    margin: 0 auto; /* Automatically centers the div horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    /* padding: 0 10px; */
+    font-size: 24px;
+    white-space: nowrap;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    border-radius: 0.9em;
+}
+
+
+.first-text {
+    display: inline-block;
+}
+
+
+
+.sec-text {
+    color: red;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid rgba(0, 0, 255, 0);
+    /* animation: typing 2.5s steps(5),
+    cursor .4s step-end infinite alternate; */
+    width: 0; /* Start with no width */
+    animation: typing 3s steps(20) 1s forwards, blink-caret 0.75s step-end infinite;
+}
+
+
+@keyframes blink-caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+
+.circular-image {
+    position: absolute;
+    bottom: 110px;  /* Adjust the distance from the bottom */
+    right: 140px;   /* Adjust the distance from the right */
+    width: 150px;  /* Size of the image */
+    height: 150px;
+    border-radius: 60px 70px 140px 40px;  /* Makes the image round */
+    object-fit: cover;   /* Ensures the image fills the circle without distortion */
+    /* border: 3px solid #2b0be0; Optional: border around the image */
+    object-position: center top; /* Makes the top part of the image visible */
+    border: 10px solid transparent; /* Transparent border to create space for glow */
+    box-shadow: 0 0 15px 5px rgba(0, 0, 255, 0.8); /* Blue glow effect */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+    
+}
+
+.circular-image:hover {
+    box-shadow: 0 0 25px 10px rgba(0, 0, 255, 1); /* Stronger glow on hover */
+    transform: scale(1.2); /* Zooms the image by 1.2 times */
+}
+
+
+.hero:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent,
+            rgba(247, 255, 5, 0.3), transparent);
+    animation: swipe 5s linear infinite;
+}
+
+
+@keyframes swipe {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+
+#skills {
+    background-size: cover;
+    background-position: center;
+    /* background-color: rgba(0, 0, 255, 0.5); */
+    width: 10cm; /* Set the width to 7 cm */
+    height: 73vh;
+    margin: 0 auto; /* Automatically centers the div horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: white; */
+    text-align: center;
+    /* padding: 0 10px; */
+    font-size: 17px;
+    /* white-space: nowrap; */
+    /* padding: 0.35em; */
+    /* padding-left: 1.2em; */
+    border-radius: 0.9em;
+    border: 10px solid transparent; /* Transparent border to create space for glow */
+    box-shadow: 0 0 15px 5px rgba(0, 0, 255, 1.2); /* Blue glow effect */
+}
+
+#contact {
+    background-size: cover;
+    background-position: center;
+    /* background-color: rgba(0, 0, 255, 0.5); */
+    width: 15cm; /* Set the width to 7 cm */
+    height: 50vh;
+    margin: 0 auto; /* Automatically centers the div horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: white; */
+    text-align: center;
+    /* padding: 0 10px; */
+    font-size: 18px;
+    /* white-space: nowrap; */
+    /* padding: 0.35em; */
+    /* padding-left: 1.2em; */
+    border-radius: 0.9em;
+    border: 10px solid transparent; /* Transparent border to create space for glow */
+    box-shadow: 0 0 15px 5px rgba(0, 0, 255, 1); /* Blue glow effect */
+    display: flex;
+    flex-direction: column;
+}
+
+#about {
+    background-size: cover;
+    background-position: center;
+    /* background-color: rgba(0, 0, 255, 0.5); */
+    width: 26cm; /* Set the width to 7 cm */
+    height: 48vh;
+    margin: 0 auto; /* Automatically centers the div horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: white; */
+    text-align: center;
+    /* padding: 0 10px; */
+    /* font-size: 17px; */
+    /* white-space: nowrap; */
+    /* padding: 0.35em; */
+    /* padding-left: 1.2em; */
+    border-radius: 0.9em;
+    border: 10px solid transparent; /* Transparent border to create space for glow */
+    box-shadow: 0 0 15px 5px rgba(0, 0, 255, 0.8); /* Blue glow effect */
+    display: flex;
+    flex-direction: column;
+}
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgba(0, 0, 255, 1);
+    font-size: 24px;
+    font-weight: bold;
+    
+} 
+
+h2::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Position the underline just below the text */
+    left: 0;
+    width: 0;
+    height: 5px; /* Thickness of the underline */
+    background-color: red; /* Red color for the underline */
+    animation: underlineErase 3s infinite;
+}
+
+
+
+@keyframes underlineErase {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-color: red;  /* Set the underline color to red */
+}
+
+
+
+/* For tablet-sized screens */
+@media screen and (min-width: 600px) {
+    #about {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  /* For tablet-sized screens */
+@media screen and (min-width: 600px) {
+    #skills {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+  }
+
+  /* For tablet-sized screens */
+@media screen and (min-width: 600px) {
+    #projects {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    
+  }
+
+  /* For tablet-sized screens */
+@media screen and (min-width: 600px) {
+    #contact {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+  }
+
+
+
+  /* For desktop-sized screens */
+@media screen and (min-width: 1024px) {
+    #about {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+  }
+
+  /* For desktop-sized screens */
+@media screen and (min-width: 1024px) {
+    #skills {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+  }
+
+  /* For desktop-sized screens */
+@media screen and (min-width: 1024px) {
+    #projects {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+  }
+
+  /* For desktop-sized screens */
+@media screen and (min-width: 1024px) {
+    #contact {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+  }
+
+
+
+
+
+
+
+
+
+
+  
