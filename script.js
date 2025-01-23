@@ -54,8 +54,11 @@ const textLoad = () => {
         text.textContent = "Data Analyst";
     }, 4000);
     setTimeout(() => {
-        text.textContent = "Graphic Designer";
+        text.textContent = "Mobile Developer";
     }, 8000);
+    setTimeout(() => {
+        text.textContent = "Graphic Designer";
+    }, 12000);
 
 }
 
